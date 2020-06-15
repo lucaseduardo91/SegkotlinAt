@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.infnetkot.segkotlinat.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/nav_cadastro"
+        android:name="com.infnetkot.segkotlinat.ui.cadastro.CadastroFragment"
+        android:label="@string/menu_cadastrar"
+        tools:layout="@layout/fragment_cadastro" />
+    <fragment
+        android:id="@+id/nav_detalhe"
+        android:name="com.infnetkot.segkotlinat.ui.detalhe.DetalheFragment"
+        android:label="@string/menu_dados_anotacao"
+        tools:layout="@layout/fragment_detalhe" />
+    <fragment
+        android:id="@+id/nav_conta"
+        android:name="com.infnetkot.segkotlinat.ui.conta.ContaFragment"
+        android:label="@string/menu_conta"
+        tools:layout="@layout/fragment_conta" />
+</navigation>

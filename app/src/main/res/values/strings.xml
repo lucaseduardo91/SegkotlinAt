@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SegKotlinAt</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Gerenciador de anotações</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_cadastrar">Criar anotação</string>
+    <string name="menu_dados_anotacao">Dados anotação</string>
+    <string name="menu_conta">Dados da conta</string>
+
+</resources>

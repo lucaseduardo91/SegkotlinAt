@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "893284518489",
+    "firebase_url": "https://segkotlinat.firebaseio.com",
+    "project_id": "segkotlinat",
+    "storage_bucket": "segkotlinat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893284518489:android:dce4409789c10629587f48",
+        "android_client_info": {
+          "package_name": "com.infnetkot.segkotlinat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893284518489-ssc6e0ijmpsm73ntu5lav5ke4j5tbidl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infnetkot.segkotlinat",
+            "certificate_hash": "ef2f159849ac43779d7461a9d82c0cc436434020"
+          }
+        },
+        {
+          "client_id": "893284518489-6525d3pe4b12t2ggt2s15c12o8tfruph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPBaNLxGCBFjX9ga69FsMkKH-dHfxZNv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893284518489-6525d3pe4b12t2ggt2s15c12o8tfruph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
