@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.infnetkot.segkotlinat.R
 import com.infnetkot.segkotlinat.adapter.AnotacaoAdapter
 import com.infnetkot.segkotlinat.model.Anotacao
@@ -20,6 +23,7 @@ import java.io.*
 class HomeFragment : Fragment() {
 
     private lateinit var anotacaoStorage: AnotacaoStorage
+    lateinit var mAdView : AdView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,6 +41,12 @@ class HomeFragment : Fragment() {
         requireActivity().let { act->
             anotacaoStorage = ViewModelProviders.of(act)
                 .get(AnotacaoStorage::class.java) }
+
+        MobileAds.initialize(requireActivity()) {}
+
+        mAdView = requireActivity().findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         carregarLista()
     }

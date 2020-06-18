@@ -43,7 +43,7 @@ class CadastroFragment : Fragment() {
             var conteudo = texto_cadastro.text
 
             if(titulo.isNullOrBlank() || data.isNullOrBlank() || conteudo.isNullOrBlank())
-                Toast.makeText(requireActivity(),"Preencha todos os campos!",Toast.LENGTH_SHORT)
+                Toast.makeText(requireActivity(),"Preencha todos os campos!",Toast.LENGTH_SHORT).show()
             else{
                 gravarArquivoTxt(titulo.toString(),conteudo.toString(),data.toString())
                 gravarArquivoFoto(titulo.toString(),data.toString(),foto)
