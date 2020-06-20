@@ -3,12 +3,11 @@ package com.infnetkot.segkotlinat.ui.detalhe
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-
 import com.infnetkot.segkotlinat.R
 import com.infnetkot.segkotlinat.util.AnotacaoStorage
 import com.infnetkot.segkotlinat.util.Criptografador
@@ -16,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_detalhe.*
 import java.io.BufferedReader
 import java.io.FileInputStream
 import java.io.InputStreamReader
+import java.nio.ByteBuffer
 
 
 class DetalheFragment : Fragment() {
@@ -47,9 +47,18 @@ class DetalheFragment : Fragment() {
     fun getImage(titulo : String, data : String){
         val encryptedIn: FileInputStream =
             Criptografador.getInstance().getEncFile("$titulo($data).fig", requireActivity()).openFileInput()
-        val br = BufferedReader(InputStreamReader(encryptedIn))
+        /*val br = BufferedReader(InputStreamReader(encryptedIn))
         var conteudo = ""
-        var bitmap = BitmapFactory.decodeByteArray(encryptedIn.readBytes(), 0,encryptedIn.readBytes().size)
+        br.lines().forEach{
+                t -> conteudo = t
+        }
+        var bytes = conteudo.toByteArray()
+
+        var bitmap = BitmapFactory.decodeByteArray(bytes, 0,bytes.size)*/
+
+        var bytes = encryptedIn.readBytes()
+
+        var bitmap = BitmapFactory.decodeByteArray(bytes, 0,bytes.size)
 
         imagem_anotacao_detalhe.setImageBitmap(bitmap)
     }
