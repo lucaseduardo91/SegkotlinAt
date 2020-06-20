@@ -42,6 +42,10 @@ class HomeFragment : Fragment() {
             anotacaoStorage = ViewModelProviders.of(act)
                 .get(AnotacaoStorage::class.java) }
 
+        // Pega o viewmodel de compra e verifica se o status está como comprado.
+        // Se não estiver, executa o código abaixo das propagandas
+        // Se estiver, usa o atributo visibility do banner e altera para View.GONE
+
         MobileAds.initialize(requireActivity()) {}
 
         mAdView = requireActivity().findViewById(R.id.adView)
